@@ -1,0 +1,35 @@
+<nav >	
+  <ul id="site-nav">
+    {% for nav in site.data.nav %}
+      {% if nav.subcategories != null %}
+	<li>
+	  <a href="{{ site.url }}{{ nav.url }}">{{ nav.title }} &#x25BC;</a>
+	  <ul>
+	    {% for subcategory in nav.subcategories %}
+	      <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+	    {% endfor %}
+	  </ul>
+	{% elsif nav.title == page.title %}
+	  <li class="active"><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+	{% else %} 
+	<li>
+	  <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+	<ul id="social-nav">
+		<li>
+			<a href="#"><i class="fa fa-twitter fa-large"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="fa fa-instagram fa-large"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="fa fa-vimeo fa-large"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="fa fa-youtube fa-large"></i></a>
+		</li>
+	</ul>
+
+</nav> 

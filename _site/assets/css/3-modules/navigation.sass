@@ -1,0 +1,36 @@
+nav
+	background: white
+	position: fixed
+	width: 100vw
+	#site-nav
+		width: 60vw
+		float: left
+		
+		li
+			display: inline
+			margin-left: 2em 
+			
+			&:first-child a
+				color: #000
+				font-size: 2em
+				&:hover
+					color: black
+			a
+				color: $pink
+				font-family: 'Oswald', sans-serif
+				font-size: 	1.5em
+				
+				&:hover
+					color: lighten($pink, 20)
+	#social-nav
+		float: right
+		list-style: none
+		margin-right: 2em
+		margin-top: 1.5em
+		li
+			display: inline
+			margin-left: 1em
+			a i
+				color: lighten($pink, 20)
+				&:hover
+					color: $pink

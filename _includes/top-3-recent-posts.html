@@ -1,0 +1,16 @@
+<section id="recentpost-container">
+	<h2>Recent Posts</h2>
+	<section class="posts">
+		{% for post in site.posts limit:3 %}
+			<article class="post-item">
+				<h3>{{post.title}}</h3>
+				<div class="recent-image">
+					<img src="{{site.baseurl}}/assets/images/{{post.image}}" alt="">
+				</div>
+				<p>{{post.description}}</p>
+			</article>
+			
+		{% endfor %}
+	</section>
+</section>
+Hello
